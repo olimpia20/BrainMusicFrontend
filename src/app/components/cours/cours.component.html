@@ -1,0 +1,25 @@
+<section id="starting" class="starting-content section-padding">
+	<div class="container">					
+		<div class="section-title text-center">
+			<h2>Titlul</h2>
+		</div>				
+		<div class="row text-center">									
+			<!-- <div class="col-lg-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;"> -->
+				<div class="starting_design">
+					<div class="single-starting">
+					<div>
+
+					<tr *ngFor="let content of cours | paginate: {itemsPerPage:1,currentPage:p};">
+								<td>{{content.text}}</td>
+						</tr>
+						<pagination-controls (pageChange) ="p=$event"></pagination-controls>
+						</div>	
+					</div>
+				</div>
+			<!-- </div>- END COL		 -->
+		</div><!--- END ROW -->
+	</div><!--- END CONTAINER -->
+</section>
+
+
+

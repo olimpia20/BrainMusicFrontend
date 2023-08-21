@@ -1,0 +1,12 @@
+<ng-container *ngIf="!authenticationService.isAuthenticated(); else authenticatedHeader">
+    <!-- Before login (Guest) -->
+    <app-header-guest></app-header-guest>
+  </ng-container>
+  
+  <ng-template #authenticatedHeader>
+    <!-- After login (Authenticated) -->
+    <app-header-authenticated></app-header-authenticated>
+  </ng-template>
+
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
